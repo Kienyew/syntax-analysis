@@ -10,12 +10,12 @@ Representing a classic expression grammar:
 
 ```
 Expr -> Expr + Term
-	  | Expr - Term
-	  | Term
+      | Expr - Term
+      | Term
 
 Term -> Term * Factor
-	  | Expr / Term
-	  | Factor
+      | Expr / Term
+      | Factor
 	  
 Factor -> num | ( Expr )
 ```
@@ -120,11 +120,9 @@ Now use the grammar defines balanced parentheses pairs:
 ```
 Start -> List
 
-List -> List Pair
-	  | Pair
+List -> List Pair | Pair
 	  
-Pair -> ( Pair )
-	  | ( )
+Pair -> ( Pair ) | ( )
 ```
 
 
@@ -151,7 +149,7 @@ G.add_production(Pair, [lp, rp])
 
 pprint(LR1.construct_canonical_set(G))
 # output:
-# 	CanonicalSet(...)
+#   CanonicalSet(...)
 ```
 
 ---
@@ -162,8 +160,8 @@ Next, create the parsing table is as:
 pprint(LR1.construct_parsing_table(G))
 # output:
 #	ParsingTable(states=...,
-#				 action=...,
-#			     goto=...)
+#                    action=...,
+#                    goto=...)
 ```
 
 ![Automata for parentheses grammar](assets/lr1-parsing-table-automata.svg)
@@ -177,7 +175,6 @@ pprint(LR1.construct_parsing_table(G))
 The API for creating `LALR(1)` parsing table is similar in `LALR1.py`:
 
 - `LALR1.construct_canonical_set(G)`
-
 - `LALR1.construct_parsing_table(G)`
 
 ```python
