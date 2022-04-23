@@ -1,5 +1,5 @@
-from grammar import Grammar, Production, Terminal, NonTerminal, Symbol, eof, first
-from LR import ParsingTable, Item, ItemSet, CanonicalSet, dot, after_dot, SHIFT, REDUCE, ACCEPT
+from .grammar import Grammar, Production, Terminal, NonTerminal, Symbol, eof, first
+from .LR import ParsingTable, Item, ItemSet, CanonicalSet, dot, after_dot, SHIFT, REDUCE, ACCEPT
 from copy import copy
 
 

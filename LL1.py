@@ -1,6 +1,6 @@
 # All utility functions needed by top down parsing (mainly LL(1) parsing)
 from collections import defaultdict
-from grammar import Production, Grammar, epsilon, first, follow
+from .grammar import Production, Grammar, epsilon, first, follow
 
 
 def construct_parsing_table(G: Grammar) -> dict[dict[Production]]:

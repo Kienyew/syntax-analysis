@@ -1,7 +1,7 @@
 # utilities used in LR(0) parser.
-from grammar import Grammar, Symbol, NonTerminal
+from .grammar import Grammar, Symbol, NonTerminal
 from copy import copy
-from LR import CanonicalSet, Item, ItemSet, dot, after_dot
+from .LR import CanonicalSet, Item, ItemSet, dot, after_dot
 
 
 def closure(G: Grammar, C: ItemSet) -> ItemSet:

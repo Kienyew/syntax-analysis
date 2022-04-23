@@ -1,6 +1,7 @@
 # utilities & classes commonly used in all LR parsers.
 
-from grammar import Grammar, Symbol, Terminal, NonTerminal
+from .grammar import Grammar, Symbol, Terminal, NonTerminal
+
 from dataclasses import dataclass, field
 from copy import copy
 from typing import Optional, Any, Union

@@ -1,6 +1,6 @@
-from LR0 import construct_canonical_set, goto
-from LR import ParsingTable, dot, after_dot, SHIFT, REDUCE, ACCEPT
-from grammar import Grammar, Terminal, Production, eof, follow
+from .LR0 import construct_canonical_set, goto
+from .LR import ParsingTable, dot, after_dot, SHIFT, REDUCE, ACCEPT
+from .grammar import Grammar, Terminal, Production, eof, follow
 
 
 # TODO: message error on conflicting
