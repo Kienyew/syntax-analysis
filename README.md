@@ -4,6 +4,17 @@ Implementation of syntax analysis tools in Python.
 
 To not creating parsing table for LR(1) by hand.
 
+## Table of Contents
+* [Example](#example)
+   * [First and Follow](#first-and-follow)
+   * [Create LL(1) Parsing Table](#create-ll1-parsing-table)
+   * [Create LR(1) Parsing Table](#create-lr1-parsing-table)
+      * [Construct LR(1) Canonical Set](#construct-lr1-canonical-set)
+   * [Create LALR(1) Parsing Table](#create-lalr1-parsing-table)
+* [How to Use](#how-to-use)
+
+
+
 ## Example
 
 Representing a classic expression grammar:
