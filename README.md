@@ -190,7 +190,7 @@ The API for creating `LALR(1)` parsing table is similar in `LALR1.py`:
 
 ```python
 from syntax_analysis import LALR1
-from syntax_analysis.misc import generate_automaton_graphviz(pt)
+from syntax_analysis.misc import generate_automaton_graphviz
 G = ... # balanced parentheses grammar
 pt = LALR1.construct_parsing_table(G)
 print(generate_automaton_graphviz(pt))
