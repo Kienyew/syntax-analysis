@@ -18,7 +18,7 @@ Syntax analysis tools in Python. (Tools for doing compiler design homework, actu
 
 ## Example
 
-### Define a Context Sensitive Grammar
+### Define a Context Free Grammar
 
 Representing a classic expression grammar:
 
