@@ -1,9 +1,9 @@
 # All utility functions needed by top down parsing (mainly LL(1) parsing)
 from collections import defaultdict
-from .grammar import Production, Grammar, epsilon, first, follow
+from grammar import Production, Grammar, Terminal, NonTerminal, epsilon, first, follow
 
 
-def construct_parsing_table(G: Grammar) -> dict[dict[Production]]:
+def construct_parsing_table(G: Grammar) -> dict[tuple[NonTerminal, Terminal], set[Production]]:
     """
     Create the parsing table for LL(1) parsing, that says if the grammar is left recursion,
     or have common left factors, this function might not work as expected.

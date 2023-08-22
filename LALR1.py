@@ -1,7 +1,7 @@
-from .grammar import Grammar, Production, Terminal, eof
-from . import LR
-from . import LR1
-from .LR import dot, SHIFT, REDUCE, ACCEPT
+from grammar import Grammar, Production, Terminal, eof
+import LR
+import LR1
+from LR import dot, SHIFT, REDUCE, ACCEPT
 from collections import defaultdict
 
 

@@ -1,7 +1,7 @@
-from syntax_analysis import LL1
-from syntax_analysis import first, follow
-from syntax_analysis import NonTerminal
-from syntax_analysis import Grammar, terminals, non_terminals
+import LL1
+from grammar import first, follow
+from grammar import NonTerminal
+from grammar import Grammar, terminals, non_terminals
 from pprint import pprint
 
 # Define the grammar:
@@ -72,8 +72,8 @@ def create_ll1_parsing_table():
 
 # Create LR(1) Parsing Table
 def create_lr1_parsing_table():
-    from syntax_analysis import LR1
-    from syntax_analysis.misc import generate_automaton_graphviz
+    import LR1
+    from misc import generate_automaton_graphviz
 
     G = parentheses_grammar()
     canonical_set = LR1.construct_canonical_set(G)
@@ -86,8 +86,8 @@ def create_lr1_parsing_table():
 
 # Create LALR(1) Parsing Table
 def create_lalr1_parsing_table():
-    from syntax_analysis import LALR1
-    from syntax_analysis.misc import generate_automaton_graphviz
+    import LALR1
+    from misc import generate_automaton_graphviz
     G = parentheses_grammar()
     pt = LALR1.construct_parsing_table(G)
     print(generate_automaton_graphviz(pt))

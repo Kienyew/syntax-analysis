@@ -1,5 +1,5 @@
-from .grammar import Grammar
-from .LR import ParsingTable, SHIFT, REDUCE, ACCEPT
+from grammar import Grammar
+from LR import ParsingTable, SHIFT, REDUCE, ACCEPT
 
 
 def generate_automaton_graphviz(pt: ParsingTable) -> str:

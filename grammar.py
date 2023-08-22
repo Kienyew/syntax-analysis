@@ -55,6 +55,7 @@ epsilon = Epsilon()
 @dataclass()
 class Production:
     '''
+
     A class represents a production [lhs -> rhs]
     '''
     lhs: NonTerminal
@@ -62,7 +63,7 @@ class Production:
 
     def __repr__(self):
         r = ' '.join(map(str, self.rhs))
-        return f'{self.lhs} -> {r}'
+        return f'{self.lhs} -> [{r}]'
 
     # let it hashable for more utilizable
     def __hash__(self):
@@ -71,6 +72,9 @@ class Production:
             x ^= hash(y)
 
         return x
+
+    def __eq__(self, other):
+        return self.lhs == other.lhs and self.rhs == other.rhs
 
     def __lt__(self, other):
         return self.lhs < other.lhs
